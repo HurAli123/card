@@ -21,6 +21,7 @@ body{
     border: 2px solid black;
     border-radius: 20px;
     max-width: 400px;
+    font-family: "Poppins";
     position: relative;
 }
 .card .img{
@@ -39,40 +40,66 @@ body{
     width: 90%;
     gap: 10px;
 }
+.card .tags li:hover{
+    background-color: rgb(119, 178, 255);
+    color: white;
+    border-color:rgb(119, 178, 255) ;
+}
 .card .tags li{
     list-style: none;
     border: 2px solid rgb(194, 194, 194);
     padding: 1px 8px;
     border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.5s;
+    transition: color 0.1s;
 }
 .card .text{
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    margin-top: 5px;
+    gap: 15px;
+    margin-top: -5px;
     width: 95%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height: auto;
-    padding: 12px;
+    max-height: 56%;
+    padding: 8px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .card .text h3{
     font-size: 30px;
 }
+@media screen and (max-width:280px) {
+    .card .text h3{
+        font-size: 23px;
+    }   
+}
 .card .text p{
     color: grey;
-    font-size: 18px;
-    word-spacing: 10px;
+    font-size: 16px;
+    text-align: left;
+    width: 95%;
     line-height: 28px;
+    text-align: justify;
 }
 .card .btn{
+    display: flex;
+    justify-content: center;
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
 }
 .card .btn button{
     padding: 15px 25px;
     border-radius:50px ;
     border: none;
-    background-color: rgb(192, 217, 255);
-    color: rgb(4, 98, 213);
-    font-weight: 800;
+    background-color: rgb(119, 178, 255);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.card .btn button:hover{
+    background-color: rgb(123, 123, 123);
 }
